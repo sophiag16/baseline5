@@ -11,6 +11,13 @@ public class InputReader {
     }
 
     public String getInput() {
-        return scanner.nextLine() + "\n" + scanner.nextLine();
+        String input = scanner.nextLine();
+        String[] splitInput = input.split("");
+        int count = 0;
+        do {
+            input += "\n" + scanner.nextLine();
+            count++;
+        }while(count < splitInput.length-2);
+        return input;
     }
 }

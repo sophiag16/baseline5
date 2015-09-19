@@ -17,6 +17,21 @@ public class InputReaderTest {
         System.setIn(inContent);
         InputReader inputReader = new InputReader(new Scanner(System.in));
 
-        assertEquals(input, inputReader.getInput());
+        assertEquals("XX\n" +
+                     "XX", inputReader.getInput());
+    }
+
+    @Test
+    public void shouldTakeInA3x3BlockOfXsAndReturnItAsAString() {
+        String input = "XX-\n" +
+                       "X-X\n" +
+                       "-X-";
+        ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
+        System.setIn(inContent);
+        InputReader inputReader = new InputReader(new Scanner(System.in));
+
+        assertEquals("XX-\n" +
+                    "X-X\n" +
+                    "-X-", inputReader.getInput());
     }
 }
