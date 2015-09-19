@@ -11,8 +11,8 @@ public class GameOfLifeApplication {
     }
 
     public void start() {
-        Scanner scanner = new Scanner(System.in);
-        String input = scanner.nextLine() +"\n" + scanner.nextLine();
+        InputReader inputReader = new InputReader(new Scanner(System.in));
+        String input = inputReader.getInput();
         System.out.println(input);
     }
 }
