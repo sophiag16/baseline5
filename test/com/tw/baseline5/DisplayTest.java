@@ -24,10 +24,12 @@ public class DisplayTest {
 
     @Test
     public void shouldTakeInA2X2BlockOfXsAndDisplayIt() {
-        Display display = new Display("some String");
+        String[][] someString = {{"X", "X"}, {"X", "X"}};
+        Display display = new Display(someString);
 
         display.print();
 
-        assertEquals("some String\n", byteArrayOutputStream.toString());
+        assertEquals("XX\n" +
+                    "XX\n", byteArrayOutputStream.toString());
     }
 }

@@ -50,4 +50,20 @@ public class GameOfLifeApplicationTest {
                     "X-X\n" +
                     "-X-\n", byteArrayOutputStream.toString());
     }
+
+    @Test
+    public void shouldTakeInAnother3X3BlockOfXsAndDisplayNextGeneration() {
+        GameOfLifeApplication gameOfLifeApplication = new GameOfLifeApplication();
+        String input = "-X-\n" +
+                "-X-\n" +
+                "-X-\n";
+        ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
+        System.setIn(inContent);
+
+        gameOfLifeApplication.start();
+
+        assertEquals("---\n" +
+                "XXX\n" +
+                "---\n", byteArrayOutputStream.toString());
+    }
 }
