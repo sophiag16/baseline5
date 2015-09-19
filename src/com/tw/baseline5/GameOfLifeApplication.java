@@ -14,6 +14,7 @@ public class GameOfLifeApplication {
         InputReader inputReader = new InputReader(new Scanner(System.in));
         String input = inputReader.getInput();
         String[][] cellBlock = new Parser().parse(input);
+
         new Display(cellBlock).print();
     }
 }
