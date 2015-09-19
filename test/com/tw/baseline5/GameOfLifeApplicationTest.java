@@ -34,4 +34,20 @@ public class GameOfLifeApplicationTest {
 
         assertEquals(input, byteArrayOutputStream.toString());
     }
+
+    @Test
+    public void shouldTakeInA3X3BlockOfXsAndDisplayNextGeneration() {
+        GameOfLifeApplication gameOfLifeApplication = new GameOfLifeApplication();
+        String input = "XX-\n" +
+                        "X-X\n" +
+                        "-X-\n";
+        ByteArrayInputStream inContent = new ByteArrayInputStream(input.getBytes());
+        System.setIn(inContent);
+
+        gameOfLifeApplication.start();
+
+        assertEquals("XX-\n" +
+                    "X-X\n" +
+                    "-X-\n", byteArrayOutputStream.toString());
+    }
 }
