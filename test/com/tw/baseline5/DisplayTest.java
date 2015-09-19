@@ -30,6 +30,18 @@ public class DisplayTest {
         display.print();
 
         assertEquals("XX\n" +
-                    "XX\n", byteArrayOutputStream.toString());
+                "XX\n", byteArrayOutputStream.toString());
+    }
+
+    @Test
+    public void shouldTakeInA3X3BlockOfXsAndDisplayIt() {
+        String[][] someString = {{"X","X","","X"}, {"X","X","","X"}, {"X","X","","X"}};
+        Display display = new Display(someString);
+
+        display.print();
+
+        assertEquals("XXX\n" +
+                "XXX\n" +
+                "XXX\n", byteArrayOutputStream.toString());
     }
 }
