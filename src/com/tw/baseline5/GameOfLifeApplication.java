@@ -13,6 +13,6 @@ public class GameOfLifeApplication {
     public void start() {
         InputReader inputReader = new InputReader(new Scanner(System.in));
         String input = inputReader.getInput();
-        System.out.println(input);
+        new Display(input).print();
     }
 }
