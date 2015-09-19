@@ -13,13 +13,7 @@ public class GameOfLifeApplication {
     public void start() {
         InputReader inputReader = new InputReader(new Scanner(System.in));
         String input = inputReader.getInput();
-
-        String[] cellRows = input.split("\n");
-        String[][] cellBlock = new String[cellRows.length][cellRows.length];
-
-        for(int i = 0; i < cellRows.length; i++) {
-            cellBlock[i] = cellRows[i].split("");
-        }
+        String[][] cellBlock = new Parser().parse(input);
 
         new Display(cellBlock).print();
     }
