@@ -11,7 +11,7 @@ public class Display {
 
     public void print() {
         for(int i = 0; i < stringToDisplay.length; i++) {
-            for(int j = 0; j<stringToDisplay.length; j++) {
+            for(int j = 0; j<stringToDisplay.length+1; j++) {
                 System.out.print(stringToDisplay[i][j]);
             }
             System.out.println("");

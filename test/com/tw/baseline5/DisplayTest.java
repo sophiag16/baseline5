@@ -24,7 +24,7 @@ public class DisplayTest {
 
     @Test
     public void shouldTakeInA2X2BlockOfXsAndDisplayIt() {
-        String[][] someString = {{"X", "X"}, {"X", "X"}};
+        String[][] someString = {{"X","", "X"}, {"X","", "X"}};
         Display display = new Display(someString);
 
         display.print();
